@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- acaptamos todo tipo de caracter -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- sera compatible con cualquier navegador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- sera compatible con cualquier dispositivo -->
+    <title>El Sazon</title>
+</head>
+<body>
+    <!-- encabezado-->
+    <header>
+        <!-- asignando un titulo => h1...h6 -->
+        <h1>Restaurante El Sazon</h1>
+    </header>
+    <!-- menu de navegacion -->
+    <nav>
+        <!--listas ordenadas <ol> y desrodenadas <ul> -->
+            <ul>
+                <!-- elementos de la lista 
+                PAGINA PRINCIPAL, platillos, ubicacion -->
+                <li>
+                    <!-- hipervinculos <a>: direccion a un enlace o un archivo que se envia-->
+                        <!-- dentro de la etiqueta <a> existe la propiedad href que es la ruta donde vamos a direccionar -->
+                   <a href="./index.html">PRINCIPAL</a>
+                </li>
+                <li>
+                    <a href="./platillos.html">PLATILLOS</a>
+                </li>
+                <li>
+                    <a href="#">UBICACION</a>
+                </li>
+            </ul>
+    </nav>
+     <!-- contenido principal <main> <section> <div> <articule> -->
+        <!-- main no puede ser hijo, osea no puede haber un main dentro de otra etiqueta padre -->
+        <main>
+            <section>
+                <!-- <img> nos sirve para colocar imagenes -->
+                <!-- src = ruta de la imagen
+                alt = nombre o titulo de la imagen -->
+                <img src="restaurant.jpg" alt="restaurante el sazon">
+            </section>
+            <section>
+                <p>
+                    lorem ipsum dolor sit amet, consecutur adipisicing elit.
+                </p>
+            </section>
+            <!-- contenido no tan relevante <aside> -->
+                <aside>
+                    <h4>Dale click aqui</h4>
+                    <!-- <button>: etiqueta para colocar boton -->
+                        <button>promociones</button>
+                </aside>
+        </main>
+        <!-- apartado para pie de pagina -->
+        <footer>
+            <h3>2023 Michael Rivas</h3>
+        </footer>
+</body>
+</html>
