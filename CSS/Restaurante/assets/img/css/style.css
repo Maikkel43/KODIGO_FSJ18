@@ -1,0 +1,313 @@
+/* selector universal*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    /*quitando decoracion al texto*/
+    text-decoration: none;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: rgba (225,225, 225, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav a{
+    padding: 0 20px;
+    color: #222;
+}
+/* aplicando pseudo clases*/
+nav a:hover{
+    color: #FF7B00;
+    /*background-color: #222;
+    border-radius: 12px;*/
+}
+/*apartado del encabezado*/
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* cuando los elementos a usar estan fuera de la carpeta del programa se usan los dos puntos
+    cuando esta dentro se usa uno, y esta fuera de todo se usa ../../*/
+    background-image: url(../img/image1.jpg);
+    height: 600px;
+    width: 100%;
+    /* agregando estilo para que la imagen se adadpte a su caja*/
+    background-size: cover;
+    background-position: bottom;
+    /* ruta de recorte*/
+    /*primer parametro es para top, segundo para left, tercero para right y el ultimo para bottom*/
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    flex-flow: column nowrap;
+}
+.texto-principal{
+    color: #fff;
+    font-size: 4rem;
+    /* opacidad de la letra*/
+    font-weight: bold;
+    /*espacio entre las letras*/
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.texto-secundario{
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 0.7rem;
+    font-weight: 400;
+}
+header, section{
+    /* padding top, botton 100px*/
+    padding:100px 0 ;
+}
+.box-center{
+    width: 80%;
+    margin: auto;
+}
+h3{
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #222;
+    text-align: center;
+}
+h4{
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #444;
+    font-weight: 400;
+}
+#texto-span{
+    color: #FF7B00;
+}
+.texto-parrafo{
+    /*espacio entre lineas*/
+    line-height: 40px;
+    color: #666666;
+}
+.about-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+.content-image{
+    /*posision relativa significa que va a
+    respetar a la caja padre, osea no se podra salir de 
+    su caja en cambio la position absolute no respeta su contenedor*/
+    position: relative;
+    flex: 0 0 400px;
+    
+}
+.content-image img{
+    width: 100%;
+    height: 310px;
+    /*manipulando la resolucion de la imagen*/
+    object-fit: cover;
+    /*object fit es directamente para imagen  y backgraund 
+    size hace practicamente lo mismo pero es para trabajar con 
+    contenedores*/
+    /*asignando sombras*/
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    transition: all .5s;
+}
+.content-image img:hover{
+    transform: scale(1.1);
+}
+.about-container .content{
+    flex: 0 0 50%;
+}
+/*apartado de ofertas*/
+.ofertas{
+    position: relative;
+    background-image: url(../img/image3.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.btn{
+    width: 170px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 25px;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    /*asignando el cursor de la manita*/
+    cursor: pointer;
+}
+.btn-oferta{
+    background-color: #FF7B00;
+    color: #fff;
+}
+.btn-oferta:hover{
+    background-color: #caa787;
+}
+/* apartado de menu de hamburguesa */
+.menu-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    /* wrap los desplaza en linea y al llegar al limite desplaza 
+    el resto hacia abajo, en cambio no wrap no desplaza abajo*/
+}
+.card{
+width: 30%;
+height: 300px;
+box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+margin-bottom: 30px;
+background-size: cover;
+background-position: center;
+text-align: center;
+}
+/*nth-child (pseudoclase) como se agrupan los hijos de un contenedor*/
+.card:nth-child(1){
+    background-image: url(../img/product1.jpg);
+}
+.card:nth-child(2){
+    background-image: url(../img/product2.jpg);
+}
+.card:nth-child(3){
+    background-image: url(../img/product3.jpg);
+}
+.card:nth-child(4){
+    background-image: url(../img/product4.jpg);
+}
+.card:nth-child(5){
+    background-image: url(../img/product5.jpg);
+}
+.card:nth-child(6){
+    background-image: url(../img/product6.jpg);
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    transition: all .5s;
+}
+.card:hover .card-container{
+    opacity: 1;
+}
+.card-title{
+font-size: 2.3rem;
+font-weight: 400;
+padding: 10px 0 0 0;
+}
+.btn-card{
+    background-color: #AB561D;
+    color: #fff;
+    transition: all .5s;
+}
+.btn-card:hover{
+    transform: scale(1.1);
+}
+footer{
+    background-color: #222222;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px; /* es e como un padding pero representa el espacio entre columnas*/
+}
+.texto-contacto, h5{
+    font-size: 1.2rem;
+    color: #FF7B00;
+    text-align: left;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.footer-parrafo{
+    line-height: 40px;
+}
+p{
+    color: #fff;
+}
+.icons-margen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap;
+    width: 60%;
+}
+.icons-margen a{
+    background-color: #FF7B00;
+    border-radius: 50%;
+    margin: 5px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    transition: all .5s;
+}.icons-margen a:hover{
+    background-color: transparent;
+}
+
+/* utilizando pseudo-element before y after*/
+
+/*overlay es una clase de css de superposicion*/
+.overlay, .header::before, .ofertas::before{
+    content: '';/* aplicamos contenido */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header *, .ofertas *{
+    position: relative;
+}
+/*apartado de las media queries*/
+/*max-widt es para el maximo de pantalla, osea empezar de cero y 
+hasta los pixeles puestos se aplicara cierto diesño
+min-widt es de donde se empieza osea de dicha cantidad de pixeles en adelante*/
+
+/*pantallas pequeñas*/
+
+@media (max-width: 576px){
+    .texto-principal{
+        font-size: 3rem;
+    }
+    .footer-container{
+        grid-template-columns: 1fr;
+    }
+    .card{
+        width: 100%;
+    }
+}
+/* pantallas gemerales*/
+
+@media (max-width: 968px){
+    .about-container .content{
+        flex: 0 0 100%;
+        margin: 50px 50px;
+    }
+    .content-image{
+        flex: 0 0 100%;
+    }
+    .icons-margen{
+        width: 100%;
+    }
+}
